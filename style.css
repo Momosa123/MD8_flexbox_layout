@@ -4,8 +4,13 @@
 
 body {
   font-family: "Blinker", sans-serif;
+  margin: 0;
 }
 
 .hero-container {
+  width: 100vw;
+  height: 30vh;
   background-image: url("./img/tech.jpg");
+  background-size: cover;
+  background-position: center;
 }
