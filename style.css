@@ -6,11 +6,12 @@ html {
 }
 body {
   font-family: "Blinker", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin: 0;
   background-color: #111d4a;
   color: #868e96;
   font-weight: 400;
+  height: 100vh;
 }
 
 .hero-container {
@@ -20,8 +21,11 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-.article-container {
+div.article-details {
+  display: flex;
+  justify-content: space-between;
+}
+.article-container article {
   padding: 2.5rem;
 }
 
@@ -31,13 +35,48 @@ h1.article-title {
   color: #05cbe9;
 }
 
+p.article-description {
+  letter-spacing: 2px;
+  line-height: 1.6;
+  margin-bottom: 8rem;
+}
+p.reading-time {
+  margin: 0;
+  /* margin-right: 2rem; */
+  flex-basis: 3rem;
+}
 span.reading-time {
   font-weight: 700;
+  font-size: 2rem;
 }
 
 a.read-more {
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem 2rem;
   background-color: #05cbe9;
+  color: #111d4a;
   font-weight: 700;
   text-decoration: none;
+  margin-top: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    display: flex;
+  }
+  .hero-container {
+    width: 40vw;
+    height: 100vh;
+  }
+
+  p.article-description {
+    margin-bottom: 0;
+  }
+  .article-container article {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .article-details {
+    margin-top: auto;
+  }
 }
